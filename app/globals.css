@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Couleurs */
+  --color-primary: #1D4ED8; /* Bleu */
+  --color-secondary: #9333EA; /* Violet */
+  --color-accent: #FACC15; /* Jaune */
+  --color-neutral: #374151; /* Gris foncé */
+  --color-background-light: #F3F4F6; /* Gris clair */
+  --color-background-dark: #101828; /* Presque noir */
+
+  /* Typographies */
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', serif;
+
+  /* Tailles de police */
+  --font-size-h1: 3rem; /* 48px */
+  --font-size-h2: 2.25rem; /* 36px */
+  --font-size-h3: 1.5rem; /* 24px */
+  --font-size-base: 1rem; /* 16px */
+
+  /* Espacements */
+  --spacing-4: 1rem; /* 16px */
+  --spacing-6: 1.5rem; /* 24px */
+
+  /* Bordures */
+  --border-radius-lg: 0.5rem; /* 8px */
+}
+
+@layer base {
+  /* Définir le modèle de boîte en border-box */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  /* Appliquer la police Inter au corps du texte */
+  body {
+    font-family: var(--font-inter);
+  }
+
+  /* Classes utilitaires */
+  .hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    border-radius: 0;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar-track,
+  .hide-scrollbar::-webkit-scrollbar-thumb,
+  .hide-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+}
